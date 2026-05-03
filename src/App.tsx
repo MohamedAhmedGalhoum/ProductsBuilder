@@ -1,17 +1,15 @@
 import ProductCard from "./components/ProductCard";
+import { productList } from "d:/AllMyProjectsHere/CVProjects/ProjectBuilder/Project-Builder/data/index";
 const App = () => {
+  // ------- we can fetch products from an API and map them to ProductCard components ------- //
+  const renderProductList = productList.map((product) => (
+    <ProductCard key={product.id} product={product} />
+  ));
+
   return (
     <div>
       <div>
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
+        {renderProductList} 
       </div>
     </div>
   );
