@@ -1,4 +1,5 @@
 import type IProduct from "../../interfaces";
+import { txtSlicer } from "../utils/function";
 import productImg from "../assets/c-d-x-PDX_a_82obo-unsplash.jpg";
 import Image from "./Image";
 import Button from "./UI/Button";
@@ -23,8 +24,7 @@ const ProductCard = ({ product }: IProps) => {
       <div className="p-4">
         <h3 className="text-lg font-semibold">{title}</h3>
         <p className="text-gray-500 text-sm mt-1 line-clamp-2">
-          {description} This is a great product that will enhance your
-          life.
+          {txtSlicer(description, 50)} 
         </p>
 
         {/* Price */}

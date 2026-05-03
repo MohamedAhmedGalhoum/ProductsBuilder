@@ -1,6 +1,11 @@
 import { v4 as uuid } from "uuid";
 import { ICategory, IFormInput, IProduct } from "../interfaces";
-
+/**
+ * This file contains the dummy data for the products, categories, colors and form inputs.
+ * The data is used to populate the product list and the category list in the application.
+ * The data is also used to populate the form inputs in the add product form.
+ * The data is also used to populate the color options in the add product form.
+ */
 export const productList: IProduct[] = [
   {
     id: uuid(),
