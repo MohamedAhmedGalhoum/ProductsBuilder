@@ -38,13 +38,13 @@ const ProductCard = ({}: IProps) => {
 
         {/* Buttons */}
         <div className="flex space-x-2 mt-4">
-          <Button ClassName="bg-blue-500 hover:bg-blue-700 w-full">
+          <Button ClassName="bg-blue-500 hover:bg-blue-700 w-full" onClick = {() => alert("Added to Cart")}>
             Add to Cart
           </Button>
-          <Button ClassName="bg-lime-500 hover:bg-lime-700 w-full">
+          <Button ClassName="bg-lime-500 hover:bg-lime-700 w-full" onClick = {() => alert("Edit Product")}>
             Edit
           </Button >
-          <Button ClassName="bg-red-500 hover:bg-red-700 w-full">
+          <Button ClassName="bg-red-500 hover:bg-red-700 w-full" onClick = {() => alert("Delete Product")}>
             Delete
           </Button>
         </div>
