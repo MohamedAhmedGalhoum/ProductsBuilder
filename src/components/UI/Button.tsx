@@ -1,17 +1,17 @@
-import {ReactNode, ButtonHTMLAttributes} from "react"
+import { ButtonHTMLAttributes, ReactNode } from "react";
 
 interface IProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
-  ClassName?: string;
-  width?: 'w-fit' | 'w-full';
+  className?: string;
+  width?: "w-full" | "w-fit";
 }
 
-const Button = ({children, ClassName, width = "w-fit", ...rest}: IProps) => {
+const Button = ({ children, className, width = "w-full", ...rest }: IProps) => {
   return (
-    <button className={`text-white py-2 px-4 rounded-md transition ${width} ${ClassName || ''}`} {... rest}> 
+    <button className={`${className} ${width} rounded-lg text-white px-3 py-3 duration-200 font-medium`} {...rest}>
       {children}
     </button>
-  )
-}
+  );
+};
 
 export default Button;
